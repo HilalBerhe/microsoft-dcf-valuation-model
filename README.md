@@ -2,27 +2,27 @@
 
 ## Project Overview
 
-This project presents a Discounted Cash Flow (DCF) valuation model for Microsoft. The model includes historical financial results, forecast assumptions, projected free cash flows, terminal value analysis, implied enterprise value, equity value, target share price, upside/downside analysis, and internal rate of return (IRR).
+This project presents a Discounted Cash Flow (DCF) valuation model for Microsoft. The model estimates Microsoft’s implied intrinsic value per share using forecasted unlevered free cash flow, terminal value analysis, enterprise value, equity value, and market value comparison.
 
-The purpose of this project is to demonstrate financial modeling, valuation, forecasting, Excel analysis, and investment analysis skills relevant to financial analyst, FP&A analyst, corporate finance, and valuation-focused roles.
+The purpose of this project is to demonstrate practical financial modeling, valuation, forecasting, Excel analysis, and investment analysis skills relevant to financial analyst, FP&A analyst, corporate finance, and valuation-focused roles.
 
-All figures in the model are shown in **millions of U.S. dollars**, except per-share values, percentages, and valuation multiples.
+All figures are shown in **millions of U.S. dollars**, except per-share values, percentages, dates, and valuation multiples.
 
 ## Model Preview
 
 ### DCF Summary Dashboard
 
-![DCF Model Dashboard](DCF%20Model%20Part%201.png)
+![DCF Model Dashboard](./DCF%20Model%20Part%201.png)
 
 ### Valuation Output
 
-![DCF Valuation Output](DCF%20Model%20Part%202.png)
+![DCF Valuation Output](./DCF%20Model%20Part%202.png)
 
 ## Key Valuation Output
 
-Based on the base-case assumptions used in the model, the DCF analysis estimates an intrinsic value of approximately **$414.03 per share**, compared to a current market price of **$384.41**.
+Based on the base-case assumptions used in the model, the DCF analysis estimates an implied intrinsic value of approximately **$414.03 per share**, compared to a current market price of **$384.41**.
 
-This implies approximately **7.7% upside**, suggesting that Microsoft may be slightly undervalued under the assumptions used in this model.
+This implies approximately **7.7% upside**, suggesting that Microsoft may be slightly undervalued under the assumptions used in this analysis.
 
 | Metric                          |  Result |
 | ------------------------------- | ------: |
@@ -46,9 +46,13 @@ This implies approximately **7.7% upside**, suggesting that Microsoft may be sli
 | Cash                    | $30,242 million |
 | Capital Expenditures    | $40,255 million |
 
-## DCF Summary
+## DCF Methodology
 
-The model projects Microsoft’s unlevered free cash flow from 2026 through 2030. Free cash flow is calculated by starting with EBIT, subtracting cash taxes, adding back depreciation and amortization, subtracting capital expenditures, and subtracting changes in net working capital.
+The model calculates unlevered free cash flow by starting with EBIT, subtracting estimated cash taxes, adding back depreciation and amortization, subtracting capital expenditures, and subtracting changes in net working capital.
+
+The model then discounts projected free cash flows and terminal value to estimate enterprise value. After adjusting for cash and debt, the model calculates implied equity value and implied intrinsic value per share.
+
+## Free Cash Flow Forecast
 
 | Year | Unlevered Free Cash Flow |
 | ---- | -----------------------: |
@@ -58,7 +62,14 @@ The model projects Microsoft’s unlevered free cash flow from 2026 through 2030
 | 2029 |         $154,115 million |
 | 2030 |         $174,503 million |
 
-The model estimates terminal value using both the perpetual growth method and the EV/EBITDA exit multiple method. The average of both methods is used as the terminal value in the base-case valuation.
+## Terminal Value Analysis
+
+The model estimates terminal value using two methods:
+
+1. **Perpetual Growth Method**
+2. **EV/EBITDA Exit Multiple Method**
+
+The base-case valuation uses the average of both methods.
 
 | Terminal Value Method          |              Value |
 | ------------------------------ | -----------------: |
@@ -79,8 +90,6 @@ The model estimates terminal value using both the perpetual growth method and th
 
 ## Market Value Comparison
 
-The model compares Microsoft’s estimated intrinsic value to its current market value.
-
 | Metric                          |              Value |
 | ------------------------------- | -----------------: |
 | Market Capitalization           | $2,869,621 million |
@@ -93,23 +102,22 @@ The model compares Microsoft’s estimated intrinsic value to its current market
 
 ## Model Highlights
 
-* Built a DCF valuation model using Microsoft financial data
+* Built a DCF valuation model for Microsoft
 * Created a forecast period from 2026 through 2030
-* Projected revenue, EBIT, taxes, depreciation and amortization, capital expenditures, and working capital
+* Projected EBIT, taxes, depreciation and amortization, capital expenditures, and working capital
 * Calculated unlevered free cash flow
 * Estimated terminal value using both perpetual growth and EV/EBITDA methods
 * Calculated enterprise value, equity value, and implied share price
-* Compared intrinsic value to current market price
+* Compared implied intrinsic value to current market value
 * Included IRR analysis to estimate expected return
-* Added charts to summarize cash flow growth and market value vs. intrinsic value
+* Added charts to summarize free cash flow growth and valuation output
 
 ## Skills Demonstrated
 
 * Financial statement analysis
 * Discounted Cash Flow valuation
-* 3-statement modeling
-* Revenue forecasting
-* Margin analysis
+* Free cash flow forecasting
+* Revenue and margin analysis
 * Working capital analysis
 * Capital expenditure forecasting
 * Terminal value calculation
@@ -120,20 +128,20 @@ The model compares Microsoft’s estimated intrinsic value to its current market
 
 ## Files Included
 
-| File                                 | Description                                                                                                |
-| ------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| `Microsoft-DCF-Valuation-Model.xlsx` | Main Excel valuation model                                                                                 |
-| `DCF Model Part 1.png`               | Screenshot of the DCF dashboard, assumptions, cash flow chart, and valuation chart                         |
-| `DCF Model Part 2.png`               | Screenshot of the detailed DCF output, terminal value, enterprise value, equity value, and return analysis |
-| `README.md`                          | Project documentation                                                                                      |
+| File                       | Description                                                                                                |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `Microsoft-DCF-Model.xlsx` | Main Excel valuation model                                                                                 |
+| `DCF Model Part 1.png`     | Screenshot of the DCF dashboard, assumptions, cash flow chart, and valuation chart                         |
+| `DCF Model Part 2.png`     | Screenshot of the detailed DCF output, terminal value, enterprise value, equity value, and return analysis |
+| `README.md`                | Project documentation                                                                                      |
 
 ## Conclusion
 
 The DCF analysis suggests that Microsoft may be slightly undervalued under the base-case assumptions used in this model. The estimated intrinsic value of **$414.03 per share** is above the current share price of **$384.41**, implying approximately **7.7% upside**.
 
-The model also estimates an internal rate of return of approximately **10.0%**, which is slightly above the discount rate of **9.0%**. This suggests a modestly attractive return profile based on the assumptions used.
+The model also estimates an internal rate of return of approximately **10.0%**, which is slightly above the discount rate of **9.0%**. This suggests a modestly attractive return profile under the assumptions used.
 
-However, the valuation is sensitive to several key assumptions, including the discount rate, perpetual growth rate, revenue growth, margins, capital expenditures, working capital changes, and terminal value methodology.
+However, the valuation is sensitive to key assumptions, including the discount rate, perpetual growth rate, revenue growth, margins, capital expenditures, working capital changes, and terminal value methodology.
 
 ## Disclaimer
 
